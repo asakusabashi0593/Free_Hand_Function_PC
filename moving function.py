@@ -30,5 +30,6 @@ def To_MY_URL(searchposition, To_Yahoo_position ,input_URL_position, To_My_Githu
 
 
 if __name__ == "__main__":
+    print("Hello, python")
     time.sleep(3)
     To_MY_URL(searchposition, To_Yahoo_position ,input_URL_position, To_My_Github_position, My_Github_URL)
