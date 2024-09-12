@@ -1,6 +1,6 @@
 import pyautogui
 import time
-print("hello")
+
 def move(x,y, num):
     # movint to particular coordinate
     pyautogui.moveTo(x, y ,duration=1)
