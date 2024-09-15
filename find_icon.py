@@ -6,6 +6,7 @@ def find_location_img(png):
 
     # 再度 'win' + 'd' でウィンドウを元に戻す
     try:
+        time.sleep(3)
         # 全てのウィンドウを最小化する (Windows)
         pyautogui.hotkey('win', 'd')  # 'win' + 'd' はデスクトップを表示し、全てのウィンドウを最小化します
 
