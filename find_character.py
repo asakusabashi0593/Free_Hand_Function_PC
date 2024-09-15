@@ -85,7 +85,7 @@ def is_text_in_image(img, target_text):
 if __name__ == "__main__":
     ## for debugging
     img = cv2.imread("C:/Users/User/Pictures/Screenshots/aaa.png")
-    target = 'WTML'
+    target = '検索または'
 
     pos = find_text(img, target)
     print(pos)

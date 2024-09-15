@@ -1,6 +1,9 @@
 import cv2
 import numpy as np
-
+import find_icon
+import Move
+import time
+# import find_character
 def init():
     # カメラキャプチャの初期化と顔認識用カスケードの読み込み
     cap = cv2.VideoCapture(0)
@@ -19,6 +22,12 @@ def detect_face(cap, face_cascade):
     return (len(faces) > 0), frame
 
 def activate_function():
+    # Move to Chrome brouser
+    x, y = find_icon.find_location_img("Chrome")
+    Move.move(x ,y, 2)
+    #
+
+    # find_character.find_text(, '検索または')
     print("顔が100フレーム連続で検出されました！機能を起動します。")
 
 def main():
@@ -30,7 +39,8 @@ def main():
         if detected:
 
             frame_counter += 1
-            if frame_counter >= 100:
+            if frame_counter >= 1:
+                time.sleep(10)
                 activate_function()
                 frame_counter = 0  # 機能起動後、カウンターをリセット
         else:
