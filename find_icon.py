@@ -32,10 +32,10 @@ def find_location_img(png):
         print(f"An error occurred: {e}")
         return (-1, -1)
     
-# if __name__ == "__main__":
-#     png = "Chrome"
-#     # print(find_location_img(png))
-#     x, y = find_location_img(png)
-#     pyautogui.moveTo(x, y ,duration=1)
-#     # print( png + ".png")
-#     # print(pyautogui.__version__)
+if __name__ == "__main__":
+    png = "Chrome"
+    # print(find_location_img(png))
+    x, y = find_location_img(png)
+    pyautogui.moveTo(x, y ,duration=1)
+    # print( png + ".png")
+    # print(pyautogui.__version__)
