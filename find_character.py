@@ -21,6 +21,7 @@ def find_text(img, target_text):
     '''
     
     results = reader.readtext(img)
+    pos = [-1, -1]
 
     for result in results:
         if target_text in result[1]:
@@ -36,10 +37,12 @@ def find_text(img, target_text):
             # 中心座標を計算
             center_x = (x1 + x2 + x3 + x4) / 4
             center_y = (y1 + y2 + y3 + y4) / 4
+            pos = [int(center_x), int(center_y)]
 
             break
-
-    pos = [int(center_x), int(center_y)]
+    
+    if pos == [-1, -1]:
+        print('target_text not found.')
     
     return pos
 
@@ -85,7 +88,7 @@ def is_text_in_image(img, target_text):
 if __name__ == "__main__":
     ## for debugging
     img = cv2.imread("C:/Users/User/Pictures/Screenshots/aaa.png")
-    target = '検索または'
+    target = 'flaskr'
 
     pos = find_text(img, target)
     print(pos)
