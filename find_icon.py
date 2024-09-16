@@ -16,7 +16,6 @@ def find_location_img(png):
         # screen_shot = pyautogui.screenshot()
         # スクリーンショットから特定の画像の位置を検索
         location = pyautogui.locateOnScreen(png + ".png", confidence=0.8)
-
         if location:
             # 画像の位置が見つかった場合、その座標を取得
             center = pyautogui.center(location)
