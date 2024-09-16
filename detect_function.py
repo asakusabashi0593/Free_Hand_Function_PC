@@ -25,7 +25,7 @@ def detect_face(cap, face_cascade):
     return (len(faces) > 0), frame
 
 def activate_function():
-    # Move to Chrome brouser
+    # Move to Chrome brouser 
     x, y = find_icon.find_location_img("Firefox")
     print(x,y)
     if x != -1 and y != -1:
@@ -37,7 +37,8 @@ def activate_function():
     if x != -1 and y != -1:
         Move.move(x , y, 1)
         my_url = "https"+ str(":") + "//github.com/asakusabashi0593" 
-        pyautogui.write(my_url, interval=0.7)
+        pyautogui.write(my_url, interval=0.3)
+        pyautogui.press("enter")
         print("顔が100フレーム連続で検出されました！機能を起動します。")
 
 def main():
