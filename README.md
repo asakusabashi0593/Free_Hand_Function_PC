@@ -10,7 +10,7 @@ This project is about implementing a free-hand feature on a PC. As the first ste
 
 3. The free-hand feature first minimizes all other windows and ensures the desktop screen is visible. Then, on the desktop, the feature locates the coordinates of the Firefox icon and double-clicks it to open Firefox.
 
-4. Next, the feature finds the specific character and locates its coordinates. Then, it performs a single click to enter the designated URL.
+4. Next,, the feature finds the specific character and locates its coordinates. Then, it performs a single click to enter the designated URL.
 
 
 
